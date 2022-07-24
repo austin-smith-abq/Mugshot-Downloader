@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 def init_driver():
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    options.add_argument("--headless")
     driver = webdriver.Chrome(options=options)
     return driver
 
